@@ -46,11 +46,15 @@ def login():
 def index():
     return render_template("index.html")
 
-
+@app.route("/game1")
+def index1():
+    return render_template("index1.html")
 @app.route("/playgame1")
 def play():
     return render_template("playgame1.html")
-
+@app.route("/index2")
+def index2():
+    return render_template("index2.html")
 
 @app.route('/register', methods=['GET', 'POST'])
 def reqister():
@@ -79,3 +83,4 @@ def reqister():
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
+
